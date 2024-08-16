@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-bg: #dddddd;
+  --primary-bg-50: #f3f3f3;
+  --secondary-bg: #759c6c;
+  --secondary-bg-50:  #698f60;
+  --secondary-fg: #ffffff;
+  --secondary-fg-90: #fcfbfa;
+  --dark-fg: #dddddd;
+  --dark-bg: #3A3632;
+  --dark-bg-50: #5C5651;
+  --dark-bg-40: #6c6661;
+  --dark-bg-20: #968f89;
+  --dark-bg-10: #e3dcd4;
+
+  --info-bg: #0076df;
+  --info-bg-70: #309fdb;
+
+  --padding-lg: 25px;
+  --padding-md: 15px;
+  --padding-sm: 8px;
+  --padding-xs: 5px;
+}
+  
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font: bold 20px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+h3 {
+  font: normal 14px / 20px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.cont {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+}
+
+hr {
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  /* border-radius: 10px 10px 0 0; */
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,  0, 0, .35);
+}
+
+table th {
+  background-color: var(--dark-bg-20);
+  color: var(--secondary-fg);
+}
+
+table td,
+table th {
+  padding: var(--padding-sm);
+  text-align: center;
+  align-items: center;
+}
+
+
+table tr:not(:hover):nth-of-type(even) {
+  background-color: var(--primary-bg-50);
+}
+
+
+tr:hover {
+  background-color: var(--info-bg);
+  color: var(--secondary-fg);
+}
+
+tr:not(:hover).selected {
+  background-color: var(--info-bg-70);
+  color: var(--secondary-fg);
+}
+
